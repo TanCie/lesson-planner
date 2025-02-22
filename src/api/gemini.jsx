@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState, useEffect, useRef } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -69,6 +70,7 @@ const GeminiComponent = ({
         3. <strong>Assessment Questions</strong> – <em>6 short questions </em>
         
         Format the response with clear headings for each section using the HTML tags.
+        Make the headings bold, subheadings italic, list elements shall be numbered like the world depends on it!!
       `;
 
       const result = await model.generateContent(prompt);
@@ -115,7 +117,7 @@ const GeminiComponent = ({
             )}
           </button>
           <div ref={contentRef} className="w-full flex flex-col items-center">
-            <Card className="mt-2 w-[90%] md:w-[80%] lg:w-full border border-gray-400">
+            <Card className="mt-2 w-[96%] md:w-[80%] lg:w-full border border-gray-400">
               <CardHeader className="flex justify-between items-center">
                 <CardTitle className="text-lg md:text-xl text-center">
                   Generated Lesson Plan
@@ -139,10 +141,13 @@ const GeminiComponent = ({
           </div>
           <button
             onClick={() => handlePdf()}
-            className="w-fit bg-blue-500 px-6 py-1 rounded-lg my-2"
+            className="w-fit bg-blue-500 px-6 py-1 rounded-lg my-1"
           >
             Download PDF
           </button>
+          <p className="text-xs text-gray-300 italic mb-4">
+            (Click on 'Preview' before downloading PDF)
+          </p>
         </div>
       )}
     </div>
