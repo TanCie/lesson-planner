@@ -87,8 +87,6 @@ const HomePage = () => {
               />
             </div>
           </div>
-
-          {/* Conditionally render the GeminiComponent with the user inputs as props */}
         </div>
       </div>
       <div className="w-full mx-16">

@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <div className="">
+    <div>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <Navbar />
         <Routes>
