@@ -111,16 +111,16 @@ const GeminiComponent = ({
             className="mt-2 px-3 py-1 bg-blue-500 text-white rounded"
           >
             {isEditing ? (
-              <p className="text-xs">Preview</p>
+              <p className="text-xs">Click to Preview</p>
             ) : (
-              <p className="text-xs">Edit</p>
+              <p className="text-xs">Click to Edit</p>
             )}
           </button>
           <div ref={contentRef} className="w-full flex flex-col items-center">
             <Card className="mt-2 w-[96%] md:w-[80%] lg:w-full border border-gray-400">
               <CardHeader className="flex justify-between items-center">
-                <CardTitle className="text-lg md:text-xl text-center">
-                  Generated Lesson Plan
+                <CardTitle className="text-lg font-mono md:text-xl text-center">
+                  Lesson Plan - "{topic}"
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -141,11 +141,11 @@ const GeminiComponent = ({
           </div>
           <button
             onClick={() => handlePdf()}
-            className="w-fit bg-blue-500 px-6 py-1 rounded-lg my-1"
+            className="w-fit font-mono bg-blue-500 px-6 py-1 rounded-lg mt-2"
           >
             Download PDF
           </button>
-          <p className="text-xs text-gray-300 italic mb-4">
+          <p className="text-xs text-gray-300 italic my-1">
             (Click on 'Preview' before downloading PDF)
           </p>
         </div>
