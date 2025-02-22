@@ -108,7 +108,11 @@ const GeminiComponent = ({
             onClick={() => setIsEditing((prev) => !prev)}
             className="mt-2 px-3 py-1 bg-blue-500 text-white rounded"
           >
-            {isEditing ? "Preview" : "Edit"}
+            {isEditing ? (
+              <p className="text-sm">Preview</p>
+            ) : (
+              <p className="text-sm">Edit</p>
+            )}
           </button>
           <div ref={contentRef} className="w-full flex flex-col items-center">
             <Card className="mt-2 w-[90%] md:w-[80%] lg:w-full border border-gray-400">
