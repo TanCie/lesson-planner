@@ -109,9 +109,9 @@ const GeminiComponent = ({
             className="mt-2 px-3 py-1 bg-blue-500 text-white rounded"
           >
             {isEditing ? (
-              <p className="text-sm">Preview</p>
+              <p className="text-xs">Preview</p>
             ) : (
-              <p className="text-sm">Edit</p>
+              <p className="text-xs">Edit</p>
             )}
           </button>
           <div ref={contentRef} className="w-full flex flex-col items-center">
